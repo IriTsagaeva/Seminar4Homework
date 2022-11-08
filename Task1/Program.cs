@@ -1,7 +1,16 @@
 ﻿double RaiseToThePower (int number, int power)
 {
     double result = 1;
-    int power_abs = Math.Abs(power);
+    int power_abs = 0;
+    if (power>=0)
+    {
+        power_abs = power;
+    }
+    else
+    {
+        power_abs = power * (-1);
+    }
+    
     for (int i = 0; i < power_abs; i++)
     {
         result = result * number;
@@ -12,6 +21,14 @@
     }
     return result;
 }
+
+//Более простой вариант с использованием библиотеки Math
+// double RaiseToThePower (int number, int power)
+// {
+//     double result = Math.Pow(number,power);
+//     return result;
+// }
+
 
 Console.Clear();
 Console.WriteLine("Пожалуйста, введите число");
