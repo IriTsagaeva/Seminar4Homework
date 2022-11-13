@@ -15,5 +15,6 @@
 
 Console.Clear();
 Console.WriteLine("Please, enter your number:");
-int sum = ReturnDecimalsSum (Int32.Parse(Console.ReadLine()));
+Int32.TryParse(Console.ReadLine(), out int number);
+int sum = ReturnDecimalsSum (number);
 Console.WriteLine($"SUM = {sum}");
